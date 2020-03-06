@@ -9,6 +9,7 @@ import {
     ListItemAvatar,
     ListItemText,
     Avatar,
+    Divider
 }  from '@material-ui/core';
 import {
     Image,
@@ -26,9 +27,10 @@ export default function InformationCards() {
                 <Grid item xs={12} sm={4}>
                     <Card>
                         <CardContent>
-                            <Typography gutterBottom variant='h5'>
+                            <Typography gutterBottom variant='h5' color='primary'>
                                 Python 3
                             </Typography>
+                            <Divider/>
                             <List>
                                 <ListItem>
                                     <ListItemAvatar>
@@ -61,9 +63,10 @@ export default function InformationCards() {
                 <Grid item xs={12} sm={4}>
                 <Card>
                         <CardContent>
-                            <Typography gutterBottom variant='h5'>
+                            <Typography gutterBottom variant='h5' color='primary'>
                                 Jupyter Notebook
                             </Typography>
+                            <Divider/>
                             <List>
                                 <ListItem>
                                     <ListItemAvatar>
@@ -96,9 +99,10 @@ export default function InformationCards() {
                 <Grid item xs={12} sm={4}>
                     <Card>
                         <CardContent>
-                            <Typography gutterBottom variant='h5'>
+                            <Typography gutterBottom variant='h5' color='primary'>
                                 AI Project
                             </Typography>
+                            <Divider/>
                             <List>
                                 <ListItem>
                                     <ListItemAvatar>

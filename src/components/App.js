@@ -82,16 +82,29 @@ function App() {
       <CssBaseline />
       <Container>
       <Grid container spacing={3}>
-      <Grid item xs={12}>
-        <Card>
-          <CardContent>
-            <Typography color="primary" variant="h5">
-            Our mission is to contribute in learning and sharing knowledge in AI space 
-            and be involved in helping global problems implementing AI.
-            </Typography>
-          </CardContent>
-        </Card>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography color="primary" variant="h5">
+              Our mission is to contribute in learning and sharing knowledge in AI space 
+              and be involved in helping global problems implementing AI.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
+      </Container>
+      <Container>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <Typography color="secondary" variant="h5">
+                We are starting our journey this june 8 by learning and sharing knowledge in AI.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
       </Grid>
       </Container>
       <InformationCards/>

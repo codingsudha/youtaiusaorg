@@ -14,8 +14,21 @@ import {
   RadioGroup,
   Radio,
   FormLabel,
-  Box
+  Box,
+  Card,
+  CardContent,
+  ListItem,
+  List,
+  ListItemText,
+  ListItemAvatar,
+  Avatar,
+  Divider
 } from '@material-ui/core';
+
+import {
+  LocationOn,
+  CalendarTodayOutlined
+} from '@material-ui/icons'
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 
@@ -121,12 +134,14 @@ export default function SignUpForm () {
     const newState = { ...formState, [name]: checked }
     setFormState(newState)
   };
+
+  const addressString = "7967 Cin Day Road, Suite K1, West Chester, OH 45069"
   
   return (submission === 'notSubmitted' || submission === 'error' || submission === 'submitted') ?
     (<Container>
         {(submission === 'submitted') ? <CircularProgress/> : <div></div>}
         <Typography component="h1" variant="h5" color="secondary">
-            Register Now For Classes
+            Register Now For Classes [June 8 - June 12]
         </Typography>
         <br></br>
         <form /*className={classes.form}*/ noValidate autoComplete="off">
@@ -204,11 +219,36 @@ export default function SignUpForm () {
           </Grid>
         </Grid>
         <br></br>
+        <Grid container spacing={1}>
+          <Grid item xs={12} sm={6}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h5" color="primary">
+                    Location
+                  </Typography>
+                  <Divider />
+                  <List>
+                    <ListItem>
+                        <ListItemAvatar>
+                            <Avatar>
+                                <LocationOn />
+                            </Avatar>
+                        </ListItemAvatar>
+                        <ListItemText primary={addressString} secondary="June 8 to 12, 2020 / 4:00 - 6:00 pm" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemText primary="Email: contact@youthaiusa.org" secondary="Ph: 5134165750" />
+                    </ListItem>
+                  </List>
+                </CardContent>
+              </Card>
+          </Grid>
+        </Grid>
+        <br></br>
         <Button
         type="submit"
         variant="contained"
         color="primary"
-        // className={classes.submit}
         onClick={handleClick}
         >
         Sign Up

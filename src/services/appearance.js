@@ -37,6 +37,11 @@ const colors = {
         id: "red",
         name: "Red",
         import: red
+    },
+    white: {
+        id: "white",
+        name: "White",
+        import: "#0000"
     }
 }
 
@@ -48,11 +53,13 @@ const defaultTheme = createMuiTheme({
       secondary: colors['blue'].import,
       error: colors['red'].import,
       success: colors['green'].import,
+      white: colors['white'].import,
       type: "light"
     },
 
     primaryColor: colors['orange'],
     secondaryColor: colors['blue'],
+    headingText: colors['white'],
     dark: false
   });
 
